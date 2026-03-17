@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/assets/fonts/BricolageGrotesque.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Dark financial theme - always dark */
+    --background: 0.13 0.015 255;
+    --foreground: 0.93 0.01 255;
+
+    --card: 0.17 0.018 255;
+    --card-foreground: 0.93 0.01 255;
+
+    --popover: 0.19 0.02 255;
+    --popover-foreground: 0.93 0.01 255;
+
+    --primary: 0.72 0.17 165;
+    --primary-foreground: 0.10 0.02 165;
+
+    --secondary: 0.22 0.02 255;
+    --secondary-foreground: 0.80 0.01 255;
+
+    --muted: 0.20 0.015 255;
+    --muted-foreground: 0.55 0.015 255;
+
+    --accent: 0.25 0.025 255;
+    --accent-foreground: 0.90 0.01 255;
+
+    --destructive: 0.65 0.22 27;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.25 0.02 255;
+    --input: 0.22 0.02 255;
+    --ring: 0.72 0.17 165;
+
+    /* Income / expense semantic */
+    --income: 0.72 0.18 145;
+    --expense: 0.62 0.22 27;
+
+    /* Charts */
+    --chart-1: 0.72 0.17 165;
+    --chart-2: 0.65 0.22 27;
+    --chart-3: 0.72 0.18 145;
+    --chart-4: 0.72 0.17 290;
+    --chart-5: 0.78 0.18 80;
+    --chart-6: 0.65 0.18 200;
+    --chart-7: 0.75 0.15 50;
+    --chart-8: 0.68 0.18 310;
+
+    /* Sidebar */
+    --sidebar: 0.10 0.02 260;
+    --sidebar-foreground: 0.90 0.01 255;
+    --sidebar-primary: 0.72 0.17 165;
+    --sidebar-primary-foreground: 0.10 0.02 165;
+    --sidebar-accent: 0.18 0.025 255;
+    --sidebar-accent-foreground: 0.90 0.01 255;
+    --sidebar-border: 0.20 0.02 260;
+    --sidebar-ring: 0.72 0.17 165;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-income {
+    color: oklch(var(--income));
+  }
+  .text-expense {
+    color: oklch(var(--expense));
+  }
+  .bg-income\/10 {
+    background-color: oklch(var(--income) / 0.1);
+  }
+  .bg-expense\/10 {
+    background-color: oklch(var(--expense) / 0.1);
+  }
+  .border-income\/30 {
+    border-color: oklch(var(--income) / 0.3);
+  }
+  .border-expense\/30 {
+    border-color: oklch(var(--expense) / 0.3);
+  }
+  .glow-primary {
+    text-shadow: 0 0 20px oklch(var(--primary) / 0.4);
+  }
+  .mesh-bg {
+    background-image:
+      linear-gradient(oklch(var(--sidebar-border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(var(--sidebar-border) / 0.4) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}

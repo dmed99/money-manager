@@ -1,0 +1,131 @@
+import { Variant_expense_income } from "../backend";
+
+export const CATEGORIES = [
+  "Food",
+  "Transport",
+  "Housing",
+  "Entertainment",
+  "Health",
+  "Shopping",
+  "Utilities",
+  "Other",
+];
+
+export const SAMPLE_TRANSACTIONS = [
+  {
+    type: Variant_expense_income.income,
+    amount: 4850,
+    category: "Other",
+    description: "Monthly salary",
+    date: "2026-03-01",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 1200,
+    category: "Housing",
+    description: "Rent payment",
+    date: "2026-03-02",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 87.5,
+    category: "Food",
+    description: "Weekly groceries at Whole Foods",
+    date: "2026-03-03",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 45.0,
+    category: "Transport",
+    description: "Monthly metro pass",
+    date: "2026-03-04",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 120.0,
+    category: "Utilities",
+    description: "Electricity & gas bill",
+    date: "2026-03-05",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 62.99,
+    category: "Entertainment",
+    description: "Netflix, Spotify subscriptions",
+    date: "2026-03-06",
+  },
+  {
+    type: Variant_expense_income.income,
+    amount: 650,
+    category: "Other",
+    description: "Freelance design project",
+    date: "2026-03-07",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 34.2,
+    category: "Food",
+    description: "Dinner at The Fig & Olive",
+    date: "2026-03-08",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 89.0,
+    category: "Health",
+    description: "Gym membership renewal",
+    date: "2026-03-09",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 156.4,
+    category: "Shopping",
+    description: "New running shoes",
+    date: "2026-03-10",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 28.5,
+    category: "Food",
+    description: "Coffee & lunch at work",
+    date: "2026-03-11",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 18.0,
+    category: "Transport",
+    description: "Uber ride to airport",
+    date: "2026-03-12",
+  },
+  {
+    type: Variant_expense_income.income,
+    amount: 200,
+    category: "Other",
+    description: "Birthday gift from parents",
+    date: "2026-03-13",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 75.0,
+    category: "Health",
+    description: "Pharmacy prescriptions",
+    date: "2026-03-14",
+  },
+  {
+    type: Variant_expense_income.expense,
+    amount: 42.3,
+    category: "Entertainment",
+    description: "Cinema tickets for two",
+    date: "2026-03-15",
+  },
+];
+
+export const SAMPLE_BUDGETS = [
+  ["Food", 400],
+  ["Transport", 150],
+  ["Housing", 1400],
+  ["Entertainment", 200],
+  ["Health", 250],
+  ["Shopping", 300],
+  ["Utilities", 180],
+  ["Other", 500],
+] as [string, number][];
